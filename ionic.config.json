@@ -1,0 +1,7 @@
+{
+  "name": "pConc",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

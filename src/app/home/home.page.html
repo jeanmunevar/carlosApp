@@ -1,0 +1,83 @@
+<header class="ion-text-center">    
+    <h1><strong>Carlos Gómez</strong></h1> 
+</header>
+<ion-content>
+  <ion-row justify-content-center align-items-center style="height: 100%">
+    <ion-row>
+      <h3>Concejo 2020 - 2023</h3>
+    </ion-row>
+  <ion-row>
+    <ion-col>      
+    </ion-col>
+    <ion-col>
+        <ion-card color="danger" (click)="verificarCc()">          
+            <ion-card-content>
+              <ion-icon name="finger-print" slot="start"></ion-icon>
+            </ion-card-content>
+        </ion-card>
+        <p text-center>Verificar Cédula</p>
+    </ion-col>
+    <ion-col>      
+    </ion-col>
+    <ion-col align-self-center>
+        <ion-card color="danger" href="/regdat">          
+          <ion-card-content>
+            <ion-icon name="clipboard" slot="start"></ion-icon>
+          </ion-card-content>
+      </ion-card>
+      <p text-center>Registrar Datos</p>
+    </ion-col>
+    <ion-col>      
+    </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col>      
+        </ion-col>
+    <ion-col align-self-center>
+        <ion-card color="danger" href="/env-sms">          
+            <ion-card-content>
+              <ion-icon name="mail" slot="start"></ion-icon>
+            </ion-card-content>
+        </ion-card>
+        <p text-center>Enviar SMS</p>
+    </ion-col>
+    <ion-col>      
+    </ion-col>
+    <ion-col align-self-center>
+        <ion-card color="danger" (click)="crearCalendario()">          
+            <ion-card-content>
+              <ion-icon name="calendar" slot="start"></ion-icon>
+            </ion-card-content>
+        </ion-card>
+        <p text-center>Agenda</p>
+    </ion-col>
+    <ion-col>      
+      </ion-col>
+  </ion-row>  
+  <ion-row>
+    <ion-col>      
+    </ion-col>
+    <ion-col>
+    </ion-col>
+    <ion-col align-self-center>   
+        <ion-card color="danger" (click)="alertDarchivo()">          
+            <ion-card-content>
+              <ion-icon name="archive" slot="start"></ion-icon>
+            </ion-card-content>
+        </ion-card>
+        <p text-center>Exportar Datos</p> 
+    </ion-col>
+    <ion-col>
+    </ion-col>
+    <ion-col>      
+      </ion-col>
+  </ion-row>
+</ion-row>
+</ion-content>
+<footer>
+  <ion-toolbar>
+    <ion-title>
+      
+    </ion-title>
+  </ion-toolbar>
+</footer>

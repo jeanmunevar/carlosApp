@@ -1,0 +1,79 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Registrar Datos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+
+    <form #formulario="ngForm">
+    
+    <ion-item>
+      <ion-label position="fixed">Nombres</ion-label>
+      <ion-input [(ngModel)]="todo.nombre" name="todo.nombre" required></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="fixed">Apellidos</ion-label>
+      <ion-input [(ngModel)]="todo.apellido" name="todo.apellido" required></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="fixed">Cedula</ion-label>
+      <ion-input [(ngModel)]="todo.cedula" type="number" name="todo.cedula" required></ion-input>
+    </ion-item>
+   
+    <ion-item>
+      <ion-label position="fixed">Celular</ion-label>
+      <ion-input [(ngModel)]="todo.celular" type="number" name="todo.celular" required></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="fixed">Email</ion-label>
+      <ion-input [(ngModel)]="todo.email" type="email" 
+      pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
+      name="todo.email" required></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="fixed">Dirección</ion-label>
+      <ion-input [(ngModel)]="todo.direccion" name="todo.direccion" required></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="fixed">Barrio</ion-label>
+      <ion-input [(ngModel)]="todo.barrio"  name="todo.barrio" required> 
+      </ion-input> 
+      
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="fixed">Comuna</ion-label>
+      <ion-input [(ngModel)]="todo.comuna" type="number" name="todo.comuna" required></ion-input>
+    </ion-item>
+  
+    <ion-item>
+        <ion-label>Puesto de Votacion:</ion-label>
+        <ion-select okText="Okay" cancelText="Dismiss" [(ngModel)]="todo.puesto" name="todo.puesto" required>          
+          <ion-select-option *ngFor="let data of pv" value="{{data.puestodevotacion}}" >{{data.puestodevotacion}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+    <ion-item>
+      <ion-label position="fixed">Mesa</ion-label>
+      <ion-input [(ngModel)]="todo.mesa" type="number" name="todo.mesa" required></ion-input>
+    </ion-item>    
+    
+    <ion-item>
+        <div class="form-group">
+            <label for="comment">Comentario:</label>
+            <textarea class="form-control" rows="7" cols="35" id="comment" [(ngModel)]="todo.comentario" name="todo.comentario"></textarea>
+        </div>
+    </ion-item><br>
+    <ion-row justify-content-center><ion-button (click)="addDatos()" color="danger" size="large" type="submit" [disabled]="formulario.invalid">Agregar</ion-button></ion-row>    
+   
+  </form>
+  </ion-content>

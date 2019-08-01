@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Enviar SMS</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>       
+  
+            
+            <ion-item style="margin: 22px;">
+              <ion-label>Enviar a todos</ion-label>
+                <ion-checkbox color="danger" slot="end" role="checkbox"></ion-checkbox>
+            </ion-item>
+          
+          
+          <ion-item style="margin: 22px;">         
+            <ion-label position="floating">Fecha</ion-label>
+            <ion-datetime [pickerOptions]="customPickerOptions"
+                          [(ngModel)]="customDate"  
+                          value="{{fecha2}}">
+                          </ion-datetime>
+          </ion-item> 
+         
+        
+        <div class="form-group"  style="margin: 22px;">
+            <h1><strong><label for="comment">Mensaje:</label></strong></h1>
+            <textarea class="form-control" rows="15" cols="35" id="comment" [(ngModel)]="mensaje"></textarea>
+        </div>  
+        <ion-row justify-content-center style="margin: 22px;">
+          <ion-button (click)="envioSms()" color="danger" size="large">Enviar mensajes</ion-button>
+        </ion-row>    
+</ion-content>
+
+
